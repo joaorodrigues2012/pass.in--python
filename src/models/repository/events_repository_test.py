@@ -4,6 +4,7 @@ from .events_repository import EventsRepository
 
 db_connection_handler.connect_to_db()
 
+
 @pytest.mark.skip(reason="New register in database")
 def test_insert_event():
     event = {
@@ -22,4 +23,3 @@ def test_get_event_by_id():
     events_repository = EventsRepository()
     response = events_repository.get_event_by_id(event_id)
     print(response)
-    print(response.title)
